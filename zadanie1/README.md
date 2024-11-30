@@ -130,12 +130,12 @@ kubectl apply -f php-apache.yaml
 
 ## Horizontal Pod Autoscaler (HPA)
 
-**Manifest: `horizontal-pod-autoscaler.yaml`**
+**Manifest: `hpa.yaml`**
 ```yaml
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: horizontal-pod-autoscaler
+  name: php-apache
   namespace: zad1
 spec:
   scaleTargetRef:
@@ -143,7 +143,7 @@ spec:
     kind: Deployment
     name: php-apache
   minReplicas: 1
-  maxReplicas: 6
+  maxReplicas: 5
   metrics:
   - type: Resource
     resource:
@@ -154,21 +154,38 @@ spec:
 ```
 **Command to apply:**
 ```bash
-kubectl apply -f horizontal-pod-autoscaler.yaml
+kubectl apply -f hpa.yaml
 ```
 
 ---
 
 ## Load Testing
 
-To test autoscaling, generate load using a `busybox` container:
-```bash
-kubectl run -i --tty load-generator --rm --image=busybox -n zad1 -- \
-    /bin/sh -c "while true; do wget -q -O- http://php-apache.zad1.svc.cluster.local; done"
+**Manifest: `load-generator.yaml`**
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: load-generator
+  namespace: zad1
+spec:
+  containers:
+  - name: load-generator
+    image: busybox
+    command: ["/bin/sh", "-c"]
+    args:
+    - "while true; do wget -q -O- http://php-apache.zad1.svc.cluster.local; done"
+    resources:
+      requests:
+        memory: "50Mi"
+        cpu: "50m"
+      limits:
+        memory: "100Mi"
+        cpu: "100m"
 ```
-**Verify autoscaling:**
+**Command to apply:**
 ```bash
-kubectl get hpa horizontal-pod-autoscaler -n zad1
+kubectl get hpa -n zad1 --watch
 kubectl get pods -n zad1
 ```
 
