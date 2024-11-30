@@ -185,6 +185,7 @@ spec:
 ```
 **Command to apply:**
 ```bash
+kubectl apply -f load-generator.yaml
 kubectl get hpa -n zad1 --watch
 kubectl get pods -n zad1
 ```
