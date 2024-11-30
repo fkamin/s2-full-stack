@@ -1,4 +1,4 @@
-# Kubernetes Lab 1 - Programowanie full-stack w chmurze obliczeniowej
+# Kubernetes Zadanie 1 - Programowanie full-stack w chmurze obliczeniowej
 
 ## Table of Contents
 1. [Namespace Creation](#namespace-creation)
