@@ -198,8 +198,3 @@ Set `maxReplicas` to 5 to ensure quotas are not exceeded during updates.
 - `maxUnavailable: 1` ensures at least one Pod remains unavailable during updates.
 - `maxSurge: 1` limits the creation of additional Pods to avoid exceeding quotas.
 - Adjusting `maxReplicas` aligns with quota constraints in `zad1` namespace.
-
----
-
-**End of README**
-
