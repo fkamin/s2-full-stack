@@ -1,0 +1,176 @@
+.project_content {
+    margin: auto;
+    width: 50%;
+    max-width: 700px;
+}
+
+.projects {
+    background-color: rgb(30, 30, 30);
+    border-radius: 7px;
+    padding: 10px;
+    width: 100%;
+}
+
+.single_project {
+    border-radius: 7px;
+    margin-bottom: 10px;
+    border: 1px solid white;
+}
+
+.your_projects_text {
+    font-size: 30px;
+    margin-left: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding-right: 20px;
+    color: white;
+}
+
+.new_project_button {
+    font-size: 15px;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0);
+    margin-left: 20px;
+    color: rgb(20, 170, 90);
+}
+
+.new_project_button:hover {
+    cursor: pointer;
+    color: rgb(10, 110, 60);
+}
+
+.delete_project_button,
+.delete_projects_button {
+    font-size: 15px;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0);
+    margin-left: 10px;
+    color: rgb(240, 20, 20);
+}
+
+.delete_project_button:hover,
+.delete_projects_button:hover {
+    cursor: pointer;
+    color: rgb(150, 20, 20);
+}
+
+.no_project_notification {
+    color: rgb(190, 190, 190);
+}
+
+.info {
+    border-radius: 7px;
+    border: 1px solid white;
+    display: flex;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.project_title {
+    color: rgb(200, 200, 200);
+    font-size: 18px;
+    width: 95%;
+    text-align: left;
+    margin-left: 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.show_project {
+    color: rgba(50, 255, 200, 0.5);
+    text-align: center;
+    margin: auto;
+    width: 5%;
+}
+
+.show_project:hover {
+    cursor: pointer;
+    color: rgb(40, 200, 150, 0.5);
+}
+
+.hide_project {
+    color: rgba(255, 50, 100, 0.5);
+    margin-left: 10px;
+}
+
+.hide_project:hover {
+    cursor: pointer;
+    color: rgb(140, 20, 50, 0.5);
+}
+
+.delete_project {
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(240, 20, 20, 0.5);
+}
+
+.delete_project:hover {
+    cursor: pointer;
+    color: rgba(150, 20, 20, 0.5);
+}
+
+.visibleOff_button_div {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.control_buttons {
+    text-align: right;
+    width: 100%;
+}
+
+@media only screen and (max-width: 1200px) {
+    .project_title {
+        width: 90%;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 692px) {
+    .delete_projects_button {
+        margin-left: 20px;
+    }
+
+    .your_projects_text {
+        font-size: 22px;
+    }
+
+    .project_title {
+        font-size: 14px;
+    }
+
+    .control_buttons .delete_project,
+    .control_buttons .hide_project,
+    .visibleOff_button_div .show_project {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 610px) {
+    .project_title {
+        width: 85%
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    .project_title {
+        width: 70%;
+        font-size: 12px;
+    }
+
+    .new_project_button,
+    .delete_projects_button {
+        font-size: 12px;
+    }
+
+    .your_projects_text {
+        font-size: 18px;
+    }
+
+    .control_buttons .delete_project,
+    .control_buttons .hide_project,
+    .visibleOff_button_div .show_project {
+        font-size: 16px;
+    }
+}

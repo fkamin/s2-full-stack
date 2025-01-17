@@ -1,0 +1,131 @@
+.project_title,
+.project_description {
+    display: flex;
+    padding: 5px;
+}
+
+.title_word,
+.description_word {
+    border-right: 1px solid rgba(255, 255, 255, 0.7);
+    text-align: center;
+    width: 20%;
+    color: rgb(220, 220, 220);
+    font-weight: bold;
+}
+
+.title_value,
+.description_value {
+    border-right: 1px solid rgba(255, 255, 255, 0.7);
+    text-align: left;
+    width: 70%;
+    color: rgb(220, 220, 220);
+    margin-left: 15px;
+    padding-right: 15px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.title_edit {
+    text-align: center;
+    width: 10%;
+    color: white;
+}
+
+.project_hr {
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    margin: 0 10px 0 10px;
+}
+
+.edit_button {
+    color: rgba(40, 140, 200, 0.9);
+}
+
+.edit_button:hover {
+    color: rgba(20, 90, 140, 0.9);
+}
+
+.delete_button,
+.cancel_button {
+    color: rgba(150, 30, 30, 0.9)
+}
+
+.cancel_button:hover {
+    color: rgba(112, 22, 22, 0.9)
+}
+
+.confirm_button {
+    color: rgba(130, 200, 20, 0.9);
+}
+
+.confirm_button:hover {
+    color: rgba(90, 130, 10, 0.9);
+}
+
+.edit_button:hover,
+.delete_button:hover,
+.confirm_button,
+.cancel_button {
+    cursor: pointer;
+}
+
+.edit_input {
+    background-color: rgb(50, 50, 50);
+    border: 2px solid rgb(240, 240, 240);
+    border-radius: 5px;
+    width: 100%;
+    font-size: 15px;
+    color: white;
+    padding: 5px;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 50px;
+    resize: vertical;
+    overflow: hidden;
+}
+
+.edit_input:focus {
+    outline: none;
+    background-color: rgb(50, 50, 50);
+}
+
+.icons {
+    text-align: center;
+    margin: auto;
+}
+
+
+
+@media only screen and (max-width: 770px) {
+    .title_word, .description_word, .title_value, .description_value {
+        font-size: 12px;
+    }
+
+    .icons .edit_button, .icons .confirm_button, .icons .cancel_button {
+        font-size: 20px;
+    }
+
+    .edit_input {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .title_word, .description_word {
+        font-size: 8px;
+    }
+
+    .title_value, .description_value {
+        font-size: 10px;
+    }
+
+    .edit_input {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 310px) {
+    .icons .edit_button, .icons .confirm_button, .icons .cancel_button {
+        font-size: 12px;
+    }
+}

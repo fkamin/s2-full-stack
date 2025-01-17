@@ -1,0 +1,39 @@
+version: "3"
+services:
+  mongo-db:
+    image: mongo:latest
+    container_name: mongo-db
+    ports:
+      - "27017:27017"
+    networks:
+      - my-network
+
+  react-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: react-app
+    ports:
+      - "3000:3000"
+    networks:
+      - my-network
+
+  java-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: java-app
+    depends_on:
+      - mongo-db
+    environment:
+      - SPRING_DATA_MONGODB_DATABASE=project-management-system-database
+      - SPRING_DATA_MONGODB_PORT=27017
+      - SPRING_DATA_MONGODB_HOST=mongo-db
+      - SERVER_ERROR_INCLUDE_MESSAGE=always
+    ports:
+      - "8080:8080"
+    networks:
+      - my-network
+
+networks:
+  my-network:

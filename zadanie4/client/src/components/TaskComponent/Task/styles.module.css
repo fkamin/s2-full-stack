@@ -1,0 +1,147 @@
+.task_content {
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    background-color: rgb(65, 65, 65);
+}
+
+.task_name {
+    color: white;
+    font-size: 18px;
+    width: 85%;
+    text-align: left;
+    margin-left: 20px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.task_buttons {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit_button {
+    margin-right: 5px;
+    color: rgb(30, 110, 170);
+}
+
+.confirm_edit_button {
+    color: rgb(40, 200, 100);
+}
+
+.delete_button {
+    color: rgb(200, 80, 80)
+}
+
+.edit_button:hover,
+.delete_button:hover,
+.confirm_edit_button {
+    cursor: pointer;
+}
+
+.edit_button:hover {
+    color: rgb(20, 90, 140);
+}
+
+.delete_button:hover {
+    color: rgb(145, 56, 56)
+}
+
+.confirm_edit_button:hover {
+    color: rgb(20, 120, 60);
+}
+
+.completed {
+    text-decoration: line-through;
+    color: rgb(210, 210, 210);
+}
+
+.input_edit {
+    width: 100%;
+    padding: 7px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 0px;
+}
+
+.input_edit:focus {
+    outline: none;
+}
+
+@media only screen and (max-width: 900px) {
+    .task_name {
+        font-size: 16px;
+        width: 80%;
+    }
+
+    .task_buttons {
+        width: 20%;
+    }
+
+    .task_buttons .edit_button,
+    .task_buttons .delete_button,
+    .task_buttons .confirm_edit_button {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .task_name {
+        font-size: 14px;
+        width: 70%;
+        margin-left: 10px;
+    }
+
+    .task_buttons {
+        width: 30%;
+    }
+
+    .task_buttons .edit_button,
+    .task_buttons .delete_button,
+    .task_buttons .confirm_edit_button {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    .task_name {
+        font-size: 12px;
+        width: 65%;
+        margin-left: 5px;
+    }
+
+    .task_buttons {
+        width: 35%;
+    }
+
+    .task_buttons .edit_button,
+    .task_buttons .delete_button,
+    .task_buttons .confirm_edit_button {
+        font-size: 14px;
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    .task_name {
+        font-size: 12px;
+        width: 60%;
+        margin-left: 5px;
+    }
+
+    .task_buttons {
+        width: 40%;
+    }
+
+    .task_buttons .edit_button,
+    .task_buttons .delete_button,
+    .task_buttons .confirm_edit_button {
+        font-size: 14px;
+        margin: 0;
+    }
+}

@@ -1,0 +1,148 @@
+.task_list {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    margin: 5px;
+    text-align: center;
+    background-color: rgb(45, 45, 45);
+}
+
+.new_task_button {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0px;
+    color: rgb(40, 200, 100);
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0;
+}
+
+.new_task_button:hover {
+    cursor: pointer;
+    color: rgb(20, 120, 60);
+}
+
+.edit_input {
+    border: 2px solid rgb(240, 240, 240);
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 10px;
+    min-width: 80%;
+    max-width: 80%;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.edit_input:focus {
+    outline: 0;
+}
+
+.edit_input::placeholder {
+    color: rgb(170, 170, 170)
+}
+
+.info {
+    display: flex;
+}
+
+.your_tasks_text {
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    text-align: left;
+    width: 95%;
+}
+
+
+.buttons {
+    text-align: center;
+    width: 5%;
+    margin: auto
+}
+
+.show_tasks {
+    font-size: 15px;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(50, 255, 200, 0.5);
+    font-weight: bold;
+}
+
+.show_tasks:hover {
+    cursor: pointer;
+    color: rgba(30, 160, 120, 0.5);
+}
+
+.hide_tasks {
+    font-size: 15px;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(255, 50, 100);
+    font-weight: bold;
+}
+
+.hide_tasks:hover {
+    cursor: pointer;
+    color: rgb(140, 20, 50);
+}
+
+@media only screen and (max-width: 1200px) {
+    .your_tasks_text {
+        width: 90%;
+    }
+    .buttons {
+        width: 10%;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    .your_tasks_text {
+        font-size: 16px;
+        width: 85%;
+        margin-left: 5px;
+    }
+
+    .buttons {
+        width: 15%;
+    }
+
+    .buttons .show_tasks, .buttons .hide_tasks {
+        font-size: 16px;
+    }
+
+    .edit_input {
+        font-size: 12px;
+    }
+}
+
+
+@media only screen and (max-width: 440px) {
+    .your_tasks_text {
+        margin-left: 2px;
+        width: 80%;
+        font-size: 14px;
+    }
+
+    .buttons {
+        width: 20%;
+    }
+
+    .new_task_button {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .your_tasks_text {
+        font-size: 12px;
+    }
+
+    .edit_input {
+        font-size: 8px;
+    }
+
+    .new_task_button {
+        font-size: 12px;
+    }
+}

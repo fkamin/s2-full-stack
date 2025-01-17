@@ -1,0 +1,128 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.user_data {
+    background-color: rgba(190, 190, 190, 0.3);
+    border-radius: 15px;
+    min-width: 400px;
+    min-height: 350px;
+    padding: 15px;
+}
+
+h2 {
+    min-width: 400px;
+    margin-left: 40px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+h4 {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 3px;
+    color: rgb(210, 210, 210)
+}
+
+h3 {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 3px;
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+}
+
+
+.property_name {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    align-content: center;
+}
+
+.value_and_button {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.value_and_button .change_button {
+    margin: 0
+}
+
+.change_button,
+.delete_account_button {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(26, 170, 214);
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.change_button:hover {
+    color: rgb(33, 128, 156);
+    cursor: pointer;
+}
+
+.delete_account_button {
+    color: rgb(90, 20, 20);
+    margin: 0;
+    padding: 0;
+}
+
+.delete_account_button:hover {
+    color: rgb(130, 20, 20);
+    cursor: pointer;
+}
+
+hr {
+    padding: 0;
+    margin: 0 0 12px 0;
+}
+
+@media only screen and (max-width: 410px) {
+    .content .user_data {
+        width: 300px;
+        min-width: 100px;
+    }
+
+    .content {
+        width: 300px;
+        min-width: 300px;
+        font-size: 12px;
+    }
+
+    .content h2 {
+        margin-left: 50%;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .content .user_data {
+        width: 200px;
+        min-width: 100px;
+    }
+
+    .content {
+        width: 200px;
+        min-width: 200px;
+        font-size: 11px;
+    }
+
+    .content h2 {
+        margin-left: 100%;
+    }
+}

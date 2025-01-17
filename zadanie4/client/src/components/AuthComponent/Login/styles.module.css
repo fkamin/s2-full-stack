@@ -1,0 +1,137 @@
+.login_container {
+	width: 100%;
+	min-height: 100vh;
+	background-color: rgb(30, 30, 30);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.login_form_container {
+	width: 900px;
+	height: 500px;
+	display: flex;
+	border-radius: 10px;
+	box-shadow: 0px 3px 3px -2px rgba(150, 150, 150, 0.2),
+		0px 3px 4px 0px rgba(150, 150, 150, 0.14), 0px 1px 8px 0px rgba(150, 150, 150, 0.12);
+}
+
+.left {
+	flex: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(55, 55, 55);
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border: 1px solid rgb(90, 90, 90);
+}
+
+.form_container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.form_container h1 {
+	font-size: 40px;
+	margin-top: 0;
+	color: white;
+}
+
+.input {
+	outline: none;
+	border: none;
+	width: 370px;
+	padding: 15px;
+	border-radius: 10px;
+	background-color: rgb(120, 120, 120);
+	margin: 5px 0;
+	font-size: 14px;
+	color: white;
+}
+
+input::placeholder {
+	color: rgb(200, 200, 200);
+}
+
+.error_msg {
+	width: 370px;
+	padding: 15px;
+	margin: 5px 0;
+	font-size: 14px;
+	background-color: #f34646;
+	color: white;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.submit_button {
+	background-color: rgb(100, 100, 100);
+	color: white;
+	margin: 10px;
+}
+
+.submit_button:hover {
+	background-color: rgb(120, 120, 120);
+}
+
+.right {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(85, 85, 85);
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border: 1px solid rgb(90, 90, 90);
+}
+
+.right h1 {
+	margin-top: 0;
+	color: white;
+	font-size: 40px;
+	align-self: center;
+}
+
+.register_button,
+.submit_button{
+	border: none;
+	outline: none;
+	padding: 12px 0;
+	background-color: rgb(60, 60, 60);
+	border-radius: 20px;
+	width: 180px;
+	font-weight: bold;
+	font-size: 14px;
+	cursor: pointer;
+	color: white;
+}
+
+.register_button:hover {
+	background-color: rgb(70, 70, 70);
+}
+
+@media only screen and (max-width: 900px) {
+	.login_form_container {
+		width: 500px;
+	}
+	
+	.form_container h1 {
+		font-size: 20px;
+	}
+
+	.right h1 {
+		font-size: 20px;
+	}
+
+	.form_container input {
+		width: 200px;
+	}
+
+	.right button {
+		width: 100px;
+	}
+}
