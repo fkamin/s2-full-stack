@@ -291,8 +291,12 @@ minikube tunnel
 ```
 ![Result of minikube tunnel](minikube-tunnel.png)
 
-**Working application:**
+### Working application:
+
 ![Working application](working-app.png)
+
 ![Working application-1](working-app-1.png)
+
 ![Working application-2](working-app-2.png)
+
 ![Working application-3](working-app-3.png)
